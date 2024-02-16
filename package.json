@@ -6,12 +6,19 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
+    "@cap-js-community/odata-v2-adapter": "^1.12.3",
+    "@cap-js/graphql": "^0.10.0",
     "@sap/cds": "^7",
     "express": "^4"
   },
   "devDependencies": {
     "@cap-js/sqlite": "^1",
     "@sap/cds-dk": "^7"
+  },
+  "cds": {
+    "cov2ap": {
+      "path": "devchallenge/v2"
+    }
   },
   "scripts": {
     "start": "cds-serve"
