@@ -1,6 +1,6 @@
 using { AdminService } from '../../srv/admin-service.cds';
 using { sap.capire.bookshop } from '../../db/schema';
-
+using from '@cap-js/change-tracking';
 ////////////////////////////////////////////////////////////////////////////
 //
 //	Books Object Page
@@ -111,3 +111,10 @@ annotate AdminService.Books with {
 annotate AdminService.Books with {
   genre @Common.ValueListWithFixedValues;
 }
+ annotate sap.changelog.aspect @(UI.Facets: [{
+  $Type : 'UI.ReferenceFacet',
+  ID    : 'ChangeHistoryFacet',
+  Label : '{i18n>changeLog}',
+  Target: 'changes/@UI.PresentationVariant',
+  ![@UI.PartOfPreview]
+}]);

@@ -19,7 +19,11 @@
   "cds": {
     "cov2ap": {
       "path": "devchallenge/v2"
-    }
+    },
+      "requires": {
+        "auth": "dummy"
+      }
+    
   },
   "scripts": {
     "start": "cds-serve"
